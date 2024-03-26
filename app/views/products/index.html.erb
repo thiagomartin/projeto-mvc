@@ -7,5 +7,7 @@
 <p> <%= product.quantidade %> </p>
 
 <%= link_to "Ver Produto", product %>
+<%= link_to "Editar produto", edit_product_path(product) %>
+<%= button_to "Apagar", product, method: :delete,form: {data: { turbo_confirm: "Você quer apagar esse produto?"}}  %>
 
 <%end%>
